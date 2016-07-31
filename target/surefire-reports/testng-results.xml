@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="15" passed="15">
+  <reporter-output>
+  </reporter-output>
+  <suite name="artID.FurstTest" duration-ms="65963" started-at="2016-07-31T05:57:56Z" finished-at="2016-07-31T05:59:02Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="65963" started-at="2016-07-31T05:57:56Z" finished-at="2016-07-31T05:59:02Z">
+      <class name="artID.FurstTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="setup" is-config="true" duration-ms="4278" started-at="2016-07-30T22:57:56Z" finished-at="2016-07-30T22:58:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="1452" started-at="2016-07-30T22:58:00Z" finished-at="2016-07-30T22:58:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="titleAssetion()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="titleAssetion" duration-ms="364" started-at="2016-07-30T22:58:02Z" finished-at="2016-07-30T22:58:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleAssetion -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="217" started-at="2016-07-30T22:58:02Z" finished-at="2016-07-30T22:58:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="validateCheckoutButtonWithEmptyFields()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="validateCheckoutButtonWithEmptyFields" duration-ms="136" started-at="2016-07-30T22:58:02Z" finished-at="2016-07-30T22:58:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCheckoutButtonWithEmptyFields -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="160" started-at="2016-07-30T22:58:02Z" finished-at="2016-07-30T22:58:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="validateMainItems()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="validateMainItems" duration-ms="534" started-at="2016-07-30T22:58:03Z" finished-at="2016-07-30T22:58:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateMainItems -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="187" started-at="2016-07-30T22:58:03Z" finished-at="2016-07-30T22:58:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="californiaTotalsTest()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="californiaTotalsTest" duration-ms="5094" started-at="2016-07-30T22:58:03Z" finished-at="2016-07-30T22:58:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- californiaTotalsTest -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="185" started-at="2016-07-30T22:58:08Z" finished-at="2016-07-30T22:58:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="californiaSubTotalsTest()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="californiaSubTotalsTest" duration-ms="4234" started-at="2016-07-30T22:58:09Z" finished-at="2016-07-30T22:58:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- californiaSubTotalsTest -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="226" started-at="2016-07-30T22:58:13Z" finished-at="2016-07-30T22:58:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="californiaPercentsTest()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="californiaPercentsTest" duration-ms="4266" started-at="2016-07-30T22:58:13Z" finished-at="2016-07-30T22:58:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- californiaPercentsTest -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="159" started-at="2016-07-30T22:58:17Z" finished-at="2016-07-30T22:58:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="nyTestTotal()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="nyTestTotal" duration-ms="3607" started-at="2016-07-30T22:58:17Z" finished-at="2016-07-30T22:58:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nyTestTotal -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="184" started-at="2016-07-30T22:58:21Z" finished-at="2016-07-30T22:58:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="nyTestSubTotal()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="nyTestSubTotal" duration-ms="3418" started-at="2016-07-30T22:58:21Z" finished-at="2016-07-30T22:58:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nyTestSubTotal -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="315" started-at="2016-07-30T22:58:25Z" finished-at="2016-07-30T22:58:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="nyTestPercent()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="nyTestPercent" duration-ms="4334" started-at="2016-07-30T22:58:25Z" finished-at="2016-07-30T22:58:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nyTestPercent -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="167" started-at="2016-07-30T22:58:29Z" finished-at="2016-07-30T22:58:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="mnTestTotal()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="mnTestTotal" duration-ms="4095" started-at="2016-07-30T22:58:30Z" finished-at="2016-07-30T22:58:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mnTestTotal -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="239" started-at="2016-07-30T22:58:34Z" finished-at="2016-07-30T22:58:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="mnTestSubTotal()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="mnTestSubTotal" duration-ms="4365" started-at="2016-07-30T22:58:34Z" finished-at="2016-07-30T22:58:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mnTestSubTotal -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="165" started-at="2016-07-30T22:58:38Z" finished-at="2016-07-30T22:58:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="mnTestPercent()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="mnTestPercent" duration-ms="3702" started-at="2016-07-30T22:58:38Z" finished-at="2016-07-30T22:58:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mnTestPercent -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="305" started-at="2016-07-30T22:58:42Z" finished-at="2016-07-30T22:58:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="otherStateTestTotal()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="otherStateTestTotal" duration-ms="6060" started-at="2016-07-30T22:58:42Z" finished-at="2016-07-30T22:58:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherStateTestTotal -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="249" started-at="2016-07-30T22:58:48Z" finished-at="2016-07-30T22:58:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="otherStateTestSubTotal()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="otherStateTestSubTotal" duration-ms="7819" started-at="2016-07-30T22:58:49Z" finished-at="2016-07-30T22:58:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherStateTestSubTotal -->
+        <test-method status="PASS" signature="navigateToUrl()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="navigateToUrl" is-config="true" duration-ms="195" started-at="2016-07-30T22:58:57Z" finished-at="2016-07-30T22:58:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToUrl -->
+        <test-method status="PASS" signature="otherStatePercent()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="otherStatePercent" duration-ms="4287" started-at="2016-07-30T22:58:57Z" finished-at="2016-07-30T22:59:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherStatePercent -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:artID.FurstTest@3dd3bcd]" name="tearDown" is-config="true" duration-ms="879" started-at="2016-07-30T22:59:01Z" finished-at="2016-07-30T22:59:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- artID.FurstTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- artID.FurstTest -->
+</testng-results>
