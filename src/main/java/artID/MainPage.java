@@ -31,17 +31,13 @@ public class MainPage {
 	public static final String NYSTATE = "New York";
 	public static final String MNSTATE = "Minnesota";
 	public static final String OREGONSTATE = "Oregon";
-	
-	
-	
-	
+		
 	
 	public MainPage(WebDriver driver){
 		this.driver = driver;
 	}
 	
 	public String mainPageTitle(){
-		driver.get("https://jungle-socks.herokuapp.com/");
 		String titleFromPage = driver.getTitle();
 		return titleFromPage;
 	}

@@ -5,13 +5,11 @@
     <classes>
       <class name="artID.FurstTest">
         <methods>
-          <include name="nyTest"/>
           <include name="navigateToUrl"/>
-          <include name="californiaTest"/>
-          <include name="otherStateTest"/>
-          <include name="mnTest"/>
-          <include name="validateMainItems"/>
+          <include name="afterMethodExecution"/>
+          <include name="validateCheckoutButtonWithEmptyFields"/>
           <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- artID.FurstTest -->
     </classes>

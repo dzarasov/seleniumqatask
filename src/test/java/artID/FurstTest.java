@@ -1,154 +1,142 @@
 package artID;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class FurstTest extends MainClassTestClass {
 	
-    @Test(priority=0)
+    @Test
     public void titleAssetion() {
-    	MainPage mainPage = new MainPage(driver);  
-        Assert.assertEquals(MainPage.expectedTitle, mainPage.mainPageTitle());
+    	try {
+	    	MainPage mainPage = new MainPage(driver); 
+	    	
+	    	// Assert title on the main page
+	        assertEquals(MainPage.expectedTitle, mainPage.mainPageTitle());
+    	}
+    	catch (Exception e) {
+    		Assert.fail();
+		}
     }
     
     
-    @Test(priority=1)
+    @Test
     public void validateCheckoutButtonWithEmptyFields() {
+    	try {
     	MainPage mainPage = new MainPage(driver); 
-    	Assert.assertTrue(mainPage.checkoutButton().isEnabled());        
+    	
+    	// Assert checkout button is enabled. This test should be failed
+    	assertFalse(mainPage.checkoutButton().isEnabled());
+    	}
+    	catch (Exception e) {
+    		Assert.fail();
+		}
     }
     
   
-    @Test(priority=2)
+    @Test
     public void validateMainItems() {
-        MainPage mainPage = new MainPage(driver); 
-    	
-        Assert.assertEquals(MainPage.expectedZebraValue, mainPage.arrOfAnimals(2)[0]);
-        Assert.assertEquals(MainPage.expectedLionValue, mainPage.arrOfAnimals(3)[0]);
-        Assert.assertEquals(MainPage.expectedElephantValue, mainPage.arrOfAnimals(4)[0]); 
-        Assert.assertEquals(MainPage.expectedGiraffeValue, mainPage.arrOfAnimals(5)[0]);    
+    	try {
+	        MainPage mainPage = new MainPage(driver); 
+	    	
+	        // Assert correct animals are presented
+	        assertEquals(MainPage.expectedZebraValue, mainPage.arrOfAnimals(2)[0]);
+	        assertEquals(MainPage.expectedLionValue, mainPage.arrOfAnimals(3)[0]);
+	        assertEquals(MainPage.expectedElephantValue, mainPage.arrOfAnimals(4)[0]); 
+	        assertEquals(MainPage.expectedGiraffeValue, mainPage.arrOfAnimals(5)[0]);
+    	}
+    	catch (Exception e) {
+    		Assert.fail();
+		}
     }    
-    
+   
 	
-    @Test(priority=3)
+    @Test
     public void californiaTotalsTest(){
-    	MainPage mainPage = new MainPage(driver);
-    	double totals = mainPage.pricesTotals(MainPage.CALITAXES)[0];
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.CALISTATE);
-   
-    	Assert.assertEquals(totals, resultsPage.subtotalValueFromResultsPage());
+    	try{
+	    	MainPage mainPage = new MainPage(driver);
+	    	double[] dataValues = mainPage.pricesTotals(MainPage.CALITAXES);
+	    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.CALISTATE);
+	   
+	    	assertEquals(dataValues[0], resultsPage.subtotalValueFromResultsPage());
+	    	// Asserting total values
+	    	
+	    	assertEquals(dataValues[1], resultsPage.taxesValueFromResultsPage());
+	    	// Asserting subtotal values
+	    	
+	    	assertEquals(dataValues[2], resultsPage.totalValueFromResultsPage());
+	    	// Asserting percent values
+    	}
+    	catch (Exception e) {
+    		Assert.fail();
+		}
     }
     
-    
-    @Test(priority=4)
-    public void californiaSubTotalsTest(){
-    	MainPage mainPage = new MainPage(driver);
-    	double subTotals = mainPage.pricesTotals(MainPage.CALITAXES)[1];
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.CALISTATE);
-   
-    	Assert.assertEquals(subTotals, resultsPage.taxesValueFromResultsPage());
-    }
-    
-    
-    @Test(priority=5)
-    public void californiaPercentsTest(){
-    	MainPage mainPage = new MainPage(driver);
-    	double percents = mainPage.pricesTotals(MainPage.CALITAXES)[2];
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.CALISTATE);
-   
-    	Assert.assertEquals(percents, resultsPage.totalValueFromResultsPage());
-    }
-    
-    
-    @Test(priority=6)
+        
+    @Test
     public void nyTestTotal(){
-    	MainPage mainPage = new MainPage(driver);
-    	double totals = mainPage.pricesTotals(MainPage.NYTAXES)[0];
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.NYSTATE);
-   
-    	Assert.assertEquals(totals, resultsPage.subtotalValueFromResultsPage());
+    	try{
+	    	MainPage mainPage = new MainPage(driver);
+	    	double[] dataValues = mainPage.pricesTotals(MainPage.NYTAXES);
+	
+	    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.NYSTATE);
+	   
+	    	assertEquals(dataValues[0], resultsPage.subtotalValueFromResultsPage());
+	    	// Asserting total values
+	    	
+	    	assertEquals(dataValues[1], resultsPage.taxesValueFromResultsPage());
+	    	// Asserting subtotal values
+	    	
+	    	assertEquals(dataValues[2], resultsPage.totalValueFromResultsPage());
+	    	// Asserting percent values
+    	}
+    	catch (Exception e) {
+    		Assert.fail();
+		}
     }
+        
     
-    
-    @Test(priority=7)
-    public void nyTestSubTotal(){
-    	MainPage mainPage = new MainPage(driver);
-     	double subTotals = mainPage.pricesTotals(MainPage.NYTAXES)[1];
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.NYSTATE);
-   
-    	Assert.assertEquals(subTotals, resultsPage.taxesValueFromResultsPage());
-    }
-    
-    
-    @Test(priority=8)
-    public void nyTestPercent(){
-    	MainPage mainPage = new MainPage(driver);
-    	double percents = mainPage.pricesTotals(MainPage.NYTAXES)[2];
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.NYSTATE);
-
-    	Assert.assertEquals(percents, resultsPage.totalValueFromResultsPage());
-    }
-   
-    
-    @Test(priority=9)
+    @Test
     public void mnTestTotal(){
-    	MainPage mainPage = new MainPage(driver);
-    	double totals = mainPage.pricesTotals(MainPage.MNTAXES)[0];  	
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.MNSTATE);
-   
-    	Assert.assertEquals(totals, resultsPage.subtotalValueFromResultsPage());
+    	try{
+	    	MainPage mainPage = new MainPage(driver);
+	    	double[] dataValues = mainPage.pricesTotals(MainPage.MNTAXES);  	
+	    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.MNSTATE);
+	       	   
+	    	assertEquals(dataValues[0], resultsPage.subtotalValueFromResultsPage());
+	    	// Asserting total values
+	    	
+	    	assertEquals(dataValues[1], resultsPage.taxesValueFromResultsPage());
+	    	// Asserting subtotal values
+	    	
+	    	assertEquals(dataValues[2], resultsPage.totalValueFromResultsPage());
+	    	// Asserting percent values
+    	}
+    	catch (Exception e) {
+    		Assert.fail();
+		}
     }
     
     
-    @Test(priority=10)
-    public void mnTestSubTotal(){
-    	MainPage mainPage = new MainPage(driver);
-     	double subTotals = mainPage.pricesTotals(MainPage.MNTAXES)[1];
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.MNSTATE);
-   
-    	Assert.assertEquals(subTotals, resultsPage.taxesValueFromResultsPage());
-    }
-    
-    
-    @Test(priority=11)
-    public void mnTestPercent(){
-    	MainPage mainPage = new MainPage(driver);
-    	double percents = mainPage.pricesTotals(MainPage.MNTAXES)[2];   	
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.MNSTATE);
-
-    	Assert.assertEquals(percents, resultsPage.totalValueFromResultsPage());
-    }
-    
-   
-    @Test(priority=12)
+    @Test
     public void otherStateTestTotal(){
-    	MainPage mainPage = new MainPage(driver);
-    	double totals = mainPage.pricesTotals(MainPage.OTHERSTATES)[0];
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.OREGONSTATE);
-    	
-    	Assert.assertEquals(totals, resultsPage.subtotalValueFromResultsPage());
+    	try{
+	    	MainPage mainPage = new MainPage(driver);
+	    	double[] dataValues = mainPage.pricesTotals(MainPage.OTHERSTATES);
+	    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.OREGONSTATE);
+	    	
+	    	assertEquals(dataValues[0], resultsPage.subtotalValueFromResultsPage());
+	    	// Asserting total values
+	    	
+	    	assertEquals(dataValues[1], resultsPage.taxesValueFromResultsPage());
+	    	// Asserting subtotal values
+	    	
+	    	assertEquals(dataValues[2], resultsPage.totalValueFromResultsPage());
+	    	// Asserting percent values
+    	}
+    	catch (Exception e) {
+    		Assert.fail();
+		}
     }
-    
-    
-    @Test(priority=13)
-    public void otherStateTestSubTotal(){
-    	MainPage mainPage = new MainPage(driver);
-     	double subTotals = mainPage.pricesTotals(MainPage.OTHERSTATES)[1];
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.OREGONSTATE);
-    	
-    	Assert.assertEquals(subTotals, resultsPage.taxesValueFromResultsPage());
-    }
-    
-    
-    @Test(priority=14)
-    public void otherStatePercent(){
-    	MainPage mainPage = new MainPage(driver);
-    	double percents = mainPage.pricesTotals(MainPage.OTHERSTATES)[2];
-    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.OREGONSTATE);
-
-    	Assert.assertEquals(percents, resultsPage.totalValueFromResultsPage());
-    }
-    
 }
-
-
