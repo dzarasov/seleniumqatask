@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestAll]">
+  <test name="states(failed)">
+    <classes>
+      <class name="artID.FurstTest">
+        <methods>
+          <include name="navigateToUrl"/>
+          <include name="afterMethodExecution"/>
+          <include name="validateCheckoutButtonWithEmptyFields"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- artID.FurstTest -->
+    </classes>
+  </test> <!-- states(failed) -->
+</suite> <!-- Failed suite [TestAll] -->

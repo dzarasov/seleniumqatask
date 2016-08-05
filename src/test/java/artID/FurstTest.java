@@ -3,9 +3,13 @@ package artID;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class FurstTest extends MainClassTestClass {
+	
+		
 	
     @Test
     public void titleAssetion() {
@@ -119,12 +123,12 @@ public class FurstTest extends MainClassTestClass {
     }
     
     
-    @Test
-    public void otherStateTestTotal(){
+    @Test(dataProvider = "states")
+    public void otherStateTestTotal(String state){
     	try{
 	    	MainPage mainPage = new MainPage(driver);
 	    	double[] dataValues = mainPage.pricesTotals(MainPage.OTHERSTATES);
-	    	ResultsPage resultsPage = mainPage.navigateToResultsPage(MainPage.OREGONSTATE);
+	    	ResultsPage resultsPage = mainPage.navigateToResultsPage(state);
 	    	
 	    	assertEquals(dataValues[0], resultsPage.subtotalValueFromResultsPage());
 	    	// Asserting total values
